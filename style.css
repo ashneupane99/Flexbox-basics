@@ -1,0 +1,54 @@
+
+body{
+    margin: 0;
+    font-size: 32px;
+}
+.parent{
+    background: blue;
+   height: 60vh;
+    /* flex: ; */
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items:center;
+    justify-content: space-around;
+    
+   /* flex-direction: column : this syntax will change the direction of content from row to column */
+    
+
+}
+
+.parent > div {
+    background-color: grey;
+    /* margin: 10px; */
+    width: 70px;
+    height: 70px;
+
+    /* use flex to move the numbers into the center of the gray box  */
+    display: flex;
+    /* justify moves content into x-axis and align will move content into y-axis  */
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.parent > div:nth-child(even){
+    background-color: red;
+}
+/* changing the position of individual items */
+ .item-4{
+    align-self:flex-end;
+}
+
+.item-6{
+   align-self:flex-start;
+}
+/* to relocate item : + integer after order will put item to the right hand side if items are aligned in row or bottom for column */
+.item-1 {
+    order: 1;
+}
+.item-7 {
+    order: -1;
+}
+.item-8 {
+    order: -1;
+}
